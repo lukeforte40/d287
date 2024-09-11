@@ -13,5 +13,6 @@ D.  Add an “About” page to the application to describe your chosen customer�
     navigation between main page and about page- about.html line 18, mainscreen.html line 20 added navigation between home page and about page with a tag.
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-    Products - Lace Boot, Soft Single Boa, Soft Double Boa, Stiff Single Boa, Stiff Double Boa
-    Parts - Inhouse Parts - White Lace, Black Lace Outsourced Part- H4 Coiler Boa, Boa Cable, M2 Coiler Boa
+    Products - BootStrapData.java line 93-106. Added Products: Lace Boot, Soft Single Boa, Soft Double Boa, Stiff Single Boa, Stiff Double Boa
+    Parts - BootStrapData.java line 43-86.Outsourced Part- White Lace, Black Lace, H4 Coiler Boa, Boa Cable, M2 Boa
+    
