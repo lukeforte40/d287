@@ -16,3 +16,12 @@ E.  Add a sample inventory appropriate for your chosen store to the application.
     Products - BootStrapData.java line 93-106. Added Products: Lace Boot, Soft Single Boa, Soft Double Boa, Stiff Single Boa, Stiff Double Boa
     Parts - BootStrapData.java line 43-86.Outsourced Part- White Lace, Black Lace, H4 Coiler Boa, Boa Cable, M2 Boa
     
+F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
+•  The “Buy Now” button must be next to the buttons that update and delete products.
+•  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
+•  Display a message that indicates the success or failure of a purchase.
+
+    1. The "Buy Now" Button added to products on mainscreen.html line 84.
+    2. button decrements inventory by one with each purchase MainScreenControllerr.java line 72-99
+    3. Added purchase success and purchase failed messages. mainscreen.html line 21, MainScreenControllerr.java line 85-86,96,50 
+
