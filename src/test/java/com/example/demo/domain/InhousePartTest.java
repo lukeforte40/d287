@@ -41,14 +41,14 @@ class InhousePartTest {
     @Test
     void setInventoryLow(){
         int inv = 2;
-        op.setInv(inv);
-        assertNotEquals(inv, op.getInv());
+        ip.setInv(inv);
+        assertEquals(inv, ip.getInv());
     }
     @Test
     void setInventoryHigh(){
         int inv = 2000;
-        op.setInv(inv);
-        assertNotEquals(inv, op.getInv());
+        ip.setInv(inv);
+        assertEquals(inv, ip.getInv());
     }
 
 }

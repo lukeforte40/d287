@@ -51,3 +51,6 @@ I.  Add at least two unit tests for the maximum and minimum fields to the PartTe
 
     added tests to see if min and max field restrictions work. OutsourcedPartTest.Java lines 42-55 and InhousePartTest.java lines 40-53.
 
+J.  Remove the class files for any unused validators in order to clean your code.
+
+    deleted valid delete part class. filename DeletePartValidator.java and ValidDeletePart.java
