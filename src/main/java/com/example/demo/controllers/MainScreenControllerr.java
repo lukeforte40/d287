@@ -82,8 +82,8 @@ public class MainScreenControllerr {
             List<Product> productList=productService.listAll(productkeyword);
             theModel.addAttribute("products", productList);
             theModel.addAttribute("productkeyword",productkeyword);
-            theModel.addAttribute("message", Message);
             Message = "Purchase Success";
+            theModel.addAttribute("message", Message);
             return "mainscreen";
         }
         else{

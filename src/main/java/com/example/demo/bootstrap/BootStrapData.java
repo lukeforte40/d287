@@ -50,6 +50,8 @@ public class BootStrapData implements CommandLineRunner {
         whiteLace.setName("White Laces");
         whiteLace.setPrice(5.00);
         whiteLace.setCompanyName("Lace Co.");
+        whiteLace.setMaxInv(30);
+        whiteLace.setMinInv(5);
 
         OutsourcedPart blackLace = new OutsourcedPart();
         blackLace.setId(2);
@@ -57,6 +59,8 @@ public class BootStrapData implements CommandLineRunner {
         blackLace.setName("Black Laces");
         blackLace.setPrice(5.00);
         blackLace.setCompanyName("Lace Co.");
+        blackLace.setMaxInv(30);
+        blackLace.setMinInv(5);
 
         OutsourcedPart h4CoilerBoa = new OutsourcedPart();
         h4CoilerBoa.setCompanyName("Boa");
@@ -64,6 +68,8 @@ public class BootStrapData implements CommandLineRunner {
         h4CoilerBoa.setInv(25);
         h4CoilerBoa.setName("H4 Coiler Boa");
         h4CoilerBoa.setPrice(0);
+        h4CoilerBoa.setMaxInv(50);
+        h4CoilerBoa.setMinInv(10);
 
         OutsourcedPart m2Boa = new OutsourcedPart();
         m2Boa.setCompanyName("Boa");
@@ -71,6 +77,8 @@ public class BootStrapData implements CommandLineRunner {
         m2Boa.setInv(25);
         m2Boa.setName("M2 Boa");
         m2Boa.setPrice(0);
+        m2Boa.setMaxInv(50);
+        m2Boa.setMinInv(10);
 
         OutsourcedPart boaCable = new OutsourcedPart();
         boaCable.setCompanyName("Boa");
@@ -78,6 +86,8 @@ public class BootStrapData implements CommandLineRunner {
         boaCable.setInv(100);
         boaCable.setName("Boa Cable");
         boaCable.setPrice(0);
+        boaCable.setMaxInv(150);
+        boaCable.setMinInv(25);
 
         outsourcedPartRepository.save(whiteLace);
         outsourcedPartRepository.save(blackLace);

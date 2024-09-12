@@ -25,3 +25,16 @@ F.  Add a “Buy Now” button to your product list. Your “Buy Now” button m
     2. button decrements inventory by one with each purchase MainScreenControllerr.java line 72-99
     3. Added purchase success and purchase failed messages. mainscreen.html line 21, MainScreenControllerr.java line 85-86,96,50 
 
+G.  Modify the parts to track maximum and minimum inventory by doing the following:
+•  Add additional fields to the part entity for maximum and minimum inventory.
+•  Modify the sample inventory to include the maximum and minimum fields.
+•  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
+•  Rename the file the persistent storage is saved to.
+•  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+
+    1. added min and max inv fields to parts. Part.java lines 32, 95-110 
+    2. Modified sample inv to include max and min. BootStrapData.java lines 53-54, 62-63, 71-72, 80-81, 89-90
+    3. Added text inputs for inventory for inhouse and outsourced parts forms. InHousePartForm.hmtl lines 22-23 and OutsourcedPartForm.html lines 24-25 mainscreen.html lines 50-51
+    4. renamed file the persistent storage is saved to as 'spring-boot-h2-d287'. application.properties line 6
+    5. added enforcement guaranteeing that inv is between or at min and max. AddOutsourcedPartController.java lines 49-25 AddInhousePartController.java lines 48-51
+

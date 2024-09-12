@@ -45,8 +45,10 @@ public class AddInhousePartController{
         else{
         InhousePartService repo=context.getBean(InhousePartServiceImpl.class);
         InhousePart ip=repo.findById((int)part.getId());
-        if(ip!=null)part.setProducts(ip.getProducts());
+        if (part.getInv() >= part.getMinInv() && part.getInv() <= part.getMaxInv()) {
+            if(ip!=null)part.setProducts(ip.getProducts());
             repo.save(part);
+        }
 
         return "confirmationaddpart";}
     }
