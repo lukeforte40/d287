@@ -1,6 +1,6 @@
 B.  Create a README file that includes notes describing where in the code to find the changes you made for each of parts C to J. Each note should include the prompt, file name, line number, and change.
 
-This File.
+    This File.
 
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 
@@ -9,10 +9,12 @@ C.  Customize the HTML user interface for your customer’s application. The use
     Parts Name- mainscreen.html line 22. Changed "Parts" to "Boot Parts".
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+
     About page - about.html whole document added about page to the project.
     navigation between main page and about page- about.html line 18, mainscreen.html line 20 added navigation between home page and about page with a tag.
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
+
     Products - BootStrapData.java line 93-106. Added Products: Lace Boot, Soft Single Boa, Soft Double Boa, Stiff Single Boa, Stiff Double Boa
     Parts - BootStrapData.java line 43-86.Outsourced Part- White Lace, Black Lace, H4 Coiler Boa, Boa Cable, M2 Boa
     
@@ -37,4 +39,11 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
     3. Added text inputs for inventory for inhouse and outsourced parts forms. InHousePartForm.hmtl lines 22-23 and OutsourcedPartForm.html lines 24-25 mainscreen.html lines 50-51
     4. renamed file the persistent storage is saved to as 'spring-boot-h2-d287'. application.properties line 6
     5. added enforcement guaranteeing that inv is between or at min and max. AddOutsourcedPartController.java lines 49-25 AddInhousePartController.java lines 48-51
+
+H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
+•  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
+•  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
+•  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+
+    1-3. Added error message when inventory is below minimum and above maximum. AddOutsourcedPartController.java lines 32, 54-60  AddInhousePartController.java lines 32, 54-60 InhousePartForm.html and OutsourcedPartForm.html line 11
 

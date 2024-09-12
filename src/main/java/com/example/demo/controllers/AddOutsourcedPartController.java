@@ -29,6 +29,7 @@ import javax.validation.Valid;
 public class AddOutsourcedPartController {
     @Autowired
     private ApplicationContext context;
+    private String Message = "Product exceeds maximum inventory limit.";
 
     @GetMapping("/showFormAddOutPart")
     public String showFormAddOutsourcedPart(Model theModel){
@@ -49,6 +50,13 @@ public class AddOutsourcedPartController {
         if (part.getInv() >= part.getMinInv() && part.getInv() <= part.getMaxInv()) {
             if(op!=null)part.setProducts(op.getProducts());
             repo.save(part);
+        }
+        else{
+            if (!(part.getInv() >= part.getMinInv())) {
+                Message = "Product cannot go below minimum inventory amount.";
+            }
+            theModel.addAttribute("message", Message);
+            return "OutsourcedPartForm";
         }
         return "confirmationaddpart";}
     }

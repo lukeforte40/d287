@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
+
 /**
  *
  *
@@ -28,6 +29,7 @@ import javax.validation.Valid;
 public class AddInhousePartController{
     @Autowired
     private ApplicationContext context;
+    private String Message = "Product exceeds maximum inventory limit.";
 
     @GetMapping("/showFormAddInPart")
     public String showFormAddInhousePart(Model theModel){
@@ -48,6 +50,13 @@ public class AddInhousePartController{
         if (part.getInv() >= part.getMinInv() && part.getInv() <= part.getMaxInv()) {
             if(ip!=null)part.setProducts(ip.getProducts());
             repo.save(part);
+        }
+        else{
+            if (!(part.getInv() >= part.getMinInv())) {
+                Message = "Product cannot go below minimum inventory amount.";
+            }
+            theModel.addAttribute("message", Message);
+            return "OutsourcedPartForm";
         }
 
         return "confirmationaddpart";}
