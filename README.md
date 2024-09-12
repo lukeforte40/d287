@@ -47,3 +47,7 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 
     1-3. Added error message when inventory is below minimum and above maximum. AddOutsourcedPartController.java lines 32, 54-60  AddInhousePartController.java lines 32, 54-60 InhousePartForm.html and OutsourcedPartForm.html line 11
 
+I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+
+    added tests to see if min and max field restrictions work. OutsourcedPartTest.Java lines 42-55 and InhousePartTest.java lines 40-53.
+

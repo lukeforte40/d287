@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  * Project: demoDarbyFrameworks2-master
@@ -38,4 +39,18 @@ class OutsourcedPartTest {
         op.setCompanyName(name);
         assertEquals(name,op.getCompanyName());
     }
+
+    @Test
+    void setInventoryLow(){
+        int inv = 2;
+        op.setInv(inv);
+        assertNotEquals(inv, op.getInv());
+    }
+    @Test
+    void setInventoryHigh(){
+        int inv = 2000;
+        op.setInv(inv);
+        assertNotEquals(inv, op.getInv());
+    }
+
 }
